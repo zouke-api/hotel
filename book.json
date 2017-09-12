@@ -1,0 +1,13 @@
+{
+    "gitbook": ">3.0.0",
+    "plugins": ["edit-link", "prism", "github"],
+    "pluginConfig": {
+        "edit-link": {
+            "base": "https://github.com/zouke-api/hotel",
+            "label": "Edit This Page"
+        },
+        "github": {
+            "url": "https://github.com/zouke-api/hotel"
+        }
+    }
+}
