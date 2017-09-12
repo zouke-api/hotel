@@ -1,6 +1,6 @@
 cd "$(dirname $0)"
 rm -rf .book
-./node_modules/.bin/gitbook uild ./ ./.book
+./node_modules/.bin/gitbook build ./ ./.book
 cd .book
 git init
 git add -A
