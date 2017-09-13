@@ -26,6 +26,12 @@
         <tbody>
     </table>
   * 测试接口地址：http://tailor.wapp.test.zouke.com
+  * **所有接口请求都需要带上以下http头**
+    
+    ``` yaml
+    Content-Type: application/JSON; charset=UTF-8
+    X-Requested_With: XMLHttpRequest
+    ```
 
 2. websocket
   * 协议格式

@@ -20,7 +20,7 @@ fi
 
 install_yarn=0
 
-yarn_v="$($yarn -V 2>/dev/null)"
+yarn_v="$($yarn --version 2>/dev/null)"
 
 if [ $? != 0 ] ; then
     printf "$red> yarn is not installed\n$cyan> yarn install:$reset\n"
