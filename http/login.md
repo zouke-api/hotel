@@ -65,12 +65,11 @@
         "tailorInfo": {
             "cover":"http://jouker.qiniudn.com/tmp_ce41ed8b046e85e51eb0c86c0e3d4e13.jpg"
         }
-    },
-    "hotelWsUrl": "ws://url-to-websocket-server"
+    }
 }
 ```
 
-**描述**：响应info字段中的identityPass标识当前用户是否通过审核认证，只有审核通过才可以使用酒店预订功能，wsUrl字段标识当前客户端连接websocket地址
+**描述**：响应info字段中的identityPass标识当前用户是否通过审核认证，只有审核通过才可以使用酒店预订功能
 
 | identityPass | 描述 |
 | ----- | ---- |
