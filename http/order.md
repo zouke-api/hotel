@@ -1,4 +1,4 @@
-### 1. /hotel/order/commit
+### 1. /ht-app/order/commit
 
 **描述**：提交订单
 
@@ -39,7 +39,7 @@
 
 **说明**：请求参数sessionObj是酒店详情中价格列表结构中对应的sessionObj
 
-### 2. /hotel/order/get-order-info-to-pay
+### 2. /ht-app/order/get-order-info-to-pay
 
 **描述**：获取用于支付的订单信息
 
@@ -89,7 +89,7 @@
 | 2 | 订单未找到(orderId错误) |
 | 3 | 订单已关闭/删除 |
 
-### 3. /hotel/order/init-wx-payment
+### 3. /ht-app/order/init-wx-payment
 
 **描述**：初始化微信支付
 
@@ -119,7 +119,7 @@
 
 **说明**：返回数据中jsApiParams用于调起微信开放接口中的支付功能
 
-### 4. /hotel/user/get-order-list
+### 4. /ht-app/user/get-order-list
 
 **描述**：获取订单列表
 
@@ -181,7 +181,7 @@
 | --- | --- |
 | 0 | 预订成功 |
 
-### 5. /hotel/order/get-order-detail
+### 5. /ht-app/order/get-order-detail
 
 **描述**：初始化微信支付
 

@@ -63,7 +63,7 @@
 
 **说明**：请求id字段标识历史记录id，响应history字段表示删除一条后新的历史记录
 
-### 2. /hotel/query/search-word
+### 3. /hotel/query/search-word
 
 **描述**：根据关键字查询 城市/地标/酒店名
 
@@ -86,7 +86,7 @@
 
 **注**：实时查询时，不要过于频繁调用该接口，前端可以使用debounce防抖方法
 
-### 3. /hotel/query/get-hotel-static-data
+### 4. /hotel/query/get-hotel-static-data
 
 **描述**：获取酒店的静态数据
 
