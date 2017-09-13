@@ -119,7 +119,7 @@
 
 **说明**：返回数据中jsApiParams用于调起微信开放接口中的支付功能
 
-### 4. /hotel/order/get-order-list
+### 4. /hotel/user/get-order-list
 
 **描述**：获取订单列表
 
