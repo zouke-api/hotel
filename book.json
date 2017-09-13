@@ -3,11 +3,11 @@
     "plugins": ["edit-link", "prism", "github"],
     "pluginsConfig": {
         "edit-link": {
-            "base": "https://github.com/zouke-api/hotel",
+            "base": "https://github.com/zouke-api/hotel/blob/master",
             "label": "Edit This Page"
         },
         "github": {
-            "url": "https://github.com/zouke-api/hotel"
+            "url": "https://github.com/zouke-api/hotel/tree/master"
         }
     }
 }
