@@ -1,3 +1,31 @@
+**注：websocket传输协议详见[接口总览](../introduce.md)，该应用传递给服务端的整个数据包裹在HtAppRequest，服务端返回的整个数据包裹在HtAppResponse中，如：**
+
+``` json
+// request
+{
+    "HtAppRequest": {
+        "event":"subscribe",
+        "channel":"hotel.list",   
+        "mid":"1504667635712_1357",      
+        "data": { "area": "...接口请求数据" },
+        "timestamp": 1504667679872
+    }
+}
+
+//response
+{
+    "HtAppResponse": {
+        "event":"publish",
+        "channel":"hotel.list",
+        "mid":"1504667635712_1357",
+        "data": { "list": ["..接口返回数据"] },
+        "timestamp": 1504667679872
+    }
+}
+```
+
+**后面接口将不再重复此部分** 
+
 ### 1. hotel.query.get-recommend-list
 
 **描述**：获取当前用户的历史查询和热门城市
