@@ -45,4 +45,3 @@
         "timestamp": 1504667679872        //时间戳
     }
     ```
-  * websocket接口地址：ws://xxx?token=userToken
