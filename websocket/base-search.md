@@ -1,10 +1,10 @@
-### 1. /hotel/query/get-recommend-list
+### 1. hotel.query.get-recommend-list
 
 **描述**：获取当前用户的历史查询和热门城市
 
 **request**：
 ``` json
-{ "token": "fdON29dizu-yowf44u7gpMLlxGnjnf4P" }
+{ "timestamp": 1505304290 }
 ```
 
 **response**：
@@ -33,13 +33,15 @@
 
 **说明**：响应hot字段表示热门城市，history字段表示查询历史，查询历史每一项都是一个完整的检索条件，完整的检索数据结构详见websocket模块
 
-### 2. /hotel/query/delete-query-history
+### 2. hotel.query.delete-query-history
 
 **描述**：删除历史查询
 
 **request**：
 ``` json
-{ "token": "fdON29dizu-yowf44u7gpMLlxGnjnf4P", "id": 364410 }
+{
+    "id":360981
+}
 ```
 
 **response**：
@@ -63,13 +65,15 @@
 
 **说明**：请求id字段标识历史记录id，响应history字段表示删除一条后新的历史记录
 
-### 3. /hotel/query/search-word
+### 3. hotel.query.search-word
 
 **描述**：根据关键字查询 城市/地标/酒店名
 
 **request**：
 ``` json
-{ "token": "fdON29dizu-yowf44u7gpMLlxGnjnf4P", "word": "d" }
+{
+    "word":"巴黎"
+}
 ```
 
 **response**：
@@ -86,7 +90,7 @@
 
 **注**：实时查询时，不要过于频繁调用该接口，前端可以使用debounce防抖方法
 
-### 4. /hotel/query/get-hotel-static-data
+### 4. hotel.query.get-static-data
 
 **描述**：获取酒店的静态数据
 
