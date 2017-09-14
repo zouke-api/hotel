@@ -9,7 +9,11 @@
     "dateRange":{"in":"2017-09-13","out":"2017-09-14"},
     "currency":"EUR",
     "range":{"max":null,"min":null},
-    "rooms":[{"roomNum":1,"adults":2,"children":0,"ages":[],"pid":"all"}]
+    "rooms":[
+        {"roomNum":2,"adults":2,"children":0,"ages":[],"pid":1},
+        {"roomNum":1,"adults":2,"children":2,"ages":[6, 15],"pid":2}
+        {"roomNum":1,"adults":2,"children":2,"ages":[6, 6],"pid":3}
+    ]
 }
 ```
 
@@ -49,7 +53,7 @@
 }
 ```
 
-**说明**：请求中的area为选择区域时接口返回值，该结构必定会有`name`字段和`type`字段，其余字段可不关心，调用时直接把完整的结构传输给服务端，rooms字段，如果多房型中，存在人数和儿童年龄数相同房型，需要做合并，pid字段固定为all。返回数据中finish字段标识该次推送是否是最后一次，注：如果不是最后一次，不会有finish字段！
+**说明**：请求中的area为选择区域时接口返回值，该结构必定会有`name`字段和`type`字段，其余字段可不关心，调用时直接把完整的结构传输给服务端，rooms字段，如果多房型中，存在人数和儿童年龄数相同房型，需要做合并，pid字段为数组索引默认从1开始。返回数据中finish字段标识该次推送是否是最后一次，注：如果不是最后一次，不会有finish字段！
 
 ### 2. hotel.detail.price
 
