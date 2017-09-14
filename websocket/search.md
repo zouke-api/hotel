@@ -108,8 +108,8 @@
 
 **描述**：查询酒店的附近酒店
 
-**request**: 同上接口
+**request**: 同`hotel.detail.price`接口
 
-**response**: 未知
+**response**: 同`hotel.list`接口
 
 
