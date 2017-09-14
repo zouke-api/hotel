@@ -78,3 +78,16 @@
 | 'empty' | 无提交审核(新用户) |
 | 'fail' | 审核不能过 |
 
+### 4. /ht-app/user/get-ws-url
+
+**说明**: 获取hotel websocket连接地址
+
+**response**：
+``` json
+{
+    "code": 0,
+    "url": "wss://xxxx"
+}
+```
+
+
