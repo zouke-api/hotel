@@ -288,3 +288,21 @@
 ```
 
 **说明**：订单状态status同上表
+
+### 5. /ht-app/order/cancel
+
+**描述**：取消订单
+
+**request**：
+``` json
+{
+    "id": 10000
+}
+```
+
+**response**：
+``` json
+{
+    "code":0
+}
+```
