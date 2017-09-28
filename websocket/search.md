@@ -75,34 +75,504 @@
 **response**：
 ``` json
 {
-    "cases":[
+    "cases": [
         {
-            "board":{
-                "breakfastFlag":1,"cancelFlag":2,"name":"含早","price":{"AUD":159,"CNY":835,"EUR":107,"GBP":97,"HKD":996,"JPY":13911,"NZD":175,"USD":128},
-                "sessionObj":{"xxx":"xxx"},
-                "totalPrice":{"AUD":159,"CNY":835,"EUR":107,"GBP":97,"HKD":996,"JPY":13911,"NZD":175,"USD":128}
+            "board": {
+                "breakfastFlag": 1,
+                "cancelFlag": 1,
+                "cancelInfo": [
+                    {
+                        "f_date": "2017-09-28",
+                        "f_time": "00:00",
+                        "price": {
+                            "AUD": 0,
+                            "CNY": 0,
+                            "EUR": 0,
+                            "GBP": 0,
+                            "HKD": 0,
+                            "JPY": 0,
+                            "NZD": 0,
+                            "USD": 0
+                        },
+                        "t_date": "2017-11-14",
+                        "t_time": "23:59"
+                    },
+                    {
+                        "f_date": "2017-11-15",
+                        "f_time": "00:00",
+                        "price": {
+                            "AUD": 53,
+                            "CNY": 275,
+                            "EUR": 36,
+                            "GBP": 31,
+                            "HKD": 323,
+                            "JPY": 4662,
+                            "NZD": 58,
+                            "USD": 42
+                        },
+                        "t_date": "2017-11-16",
+                        "t_time": "23:59"
+                    }
+                ],
+                "price": {
+                    "AUD": 53,
+                    "CNY": 275,
+                    "EUR": 36,
+                    "GBP": 31,
+                    "HKD": 323,
+                    "JPY": 4662,
+                    "NZD": 58,
+                    "USD": 42
+                },
+                "sessionObj": {
+                    "currency": "EUR",
+                    "hid": 374562,
+                    "ratePlanId": "5:545985:34086945:2:1331:3:Y",
+                    "searchParam": {
+                        "area": {
+                            "hotelId": 374562,
+                            "type": "hotel"
+                        },
+                        "currency": "EUR",
+                        "dateRange": {
+                            "in": "2017-11-17",
+                            "out": "2017-11-18"
+                        },
+                        "pid": 1,
+                        "reqId": "15065635365329831171131554104034000904",
+                        "rooms": [
+                            {
+                                "adults": 2,
+                                "ages": [],
+                                "children": 0
+                            }
+                        ]
+                    },
+                    "sid": "43315065635365329831171131554104034000904",
+                    "sp": "dl",
+                    "sp_id": 133504
+                },
+                "totalPrice": {
+                    "AUD": 53,
+                    "CNY": 275,
+                    "EUR": 36,
+                    "GBP": 31,
+                    "HKD": 323,
+                    "JPY": 4662,
+                    "NZD": 58,
+                    "USD": 42
+                }
             },
-            "hid":392326,
-            "room":[
-                {"desc":"","name":"双人间","number":1,"person":2}
+            "hid": 374562,
+            "room": [
+                {
+                    "desc": " ",
+                    "name": "Double/twin",
+                    "number": 1,
+                    "person": 2
+                }
             ],
-            "sp":"vt",
-            "sp_id":15954
+            "sp": "dl",
+            "sp_id": 133504
         },
         {
-            "board":{
-                "breakfastFlag":1,"cancelFlag":2,"name":"含早","price":{"AUD":184,"CNY":964,"EUR":124,"GBP":111,"HKD":1151,"JPY":16067,"NZD":202,"USD":148},
-                "sessionObj":{"xxx":"xxx"},
-                "totalPrice":{"AUD":184,"CNY":964,"EUR":124,"GBP":111,"HKD":1151,"JPY":16067,"NZD":202,"USD":148}
+            "board": {
+                "breakfastFlag": 1,
+                "cancelFlag": 1,
+                "cancelInfo": [
+                    {
+                        "f_date": "2017-09-28",
+                        "f_time": "00:00",
+                        "price": {
+                            "AUD": 0,
+                            "CNY": 0,
+                            "EUR": 0,
+                            "GBP": 0,
+                            "HKD": 0,
+                            "JPY": 0,
+                            "NZD": 0,
+                            "USD": 0
+                        },
+                        "t_date": "2017-11-12",
+                        "t_time": "23:59"
+                    },
+                    {
+                        "f_date": "2017-11-13",
+                        "f_time": "00:00",
+                        "price": {
+                            "AUD": 54,
+                            "CNY": 279,
+                            "EUR": 36,
+                            "GBP": 32,
+                            "HKD": 328,
+                            "JPY": 4729,
+                            "NZD": 59,
+                            "USD": 42
+                        },
+                        "t_date": "2017-11-16",
+                        "t_time": "23:59"
+                    }
+                ],
+                "price": {
+                    "AUD": 54,
+                    "CNY": 279,
+                    "EUR": 36,
+                    "GBP": 32,
+                    "HKD": 328,
+                    "JPY": 4729,
+                    "NZD": 59,
+                    "USD": 42
+                },
+                "sessionObj": {
+                    "currency": "EUR",
+                    "hid": 374562,
+                    "ratePlanId": "25:46E627198687090D:BNN",
+                    "searchParam": {
+                        "area": {
+                            "hotelId": 374562,
+                            "type": "hotel"
+                        },
+                        "currency": "EUR",
+                        "dateRange": {
+                            "in": "2017-11-17",
+                            "out": "2017-11-18"
+                        },
+                        "pid": 1,
+                        "reqId": "15065635365329831171131554104034000904",
+                        "rooms": [
+                            {
+                                "adults": 2,
+                                "ages": [],
+                                "children": 0
+                            }
+                        ]
+                    },
+                    "sid": "43315065635365329831171131554104034000904",
+                    "sp": "dl",
+                    "sp_id": 133504
+                },
+                "totalPrice": {
+                    "AUD": 54,
+                    "CNY": 279,
+                    "EUR": 36,
+                    "GBP": 32,
+                    "HKD": 328,
+                    "JPY": 4729,
+                    "NZD": 59,
+                    "USD": 42
+                }
             },
-            "hid":392326,
-            "room":[
-                {"desc":"","name":"双床 双人间","number":1,"person":2}
+            "hid": 374562,
+            "room": [
+                {
+                    "desc": " ",
+                    "name": "Twin/double Room",
+                    "number": 1,
+                    "person": 2
+                }
             ],
-            "sp":"vt",
-            "sp_id":15954
+            "sp": "dl",
+            "sp_id": 133504
+        },
+        {
+            "board": {
+                "breakfastFlag": 1,
+                "cancelFlag": 1,
+                "cancelInfo": [
+                    {
+                        "f_date": "2017-09-28",
+                        "f_time": "00:00",
+                        "price": {
+                            "AUD": 0,
+                            "CNY": 0,
+                            "EUR": 0,
+                            "GBP": 0,
+                            "HKD": 0,
+                            "JPY": 0,
+                            "NZD": 0,
+                            "USD": 0
+                        },
+                        "t_date": "2017-11-13",
+                        "t_time": "23:59"
+                    },
+                    {
+                        "f_date": "2017-11-14",
+                        "f_time": "00:00",
+                        "price": {
+                            "AUD": 54,
+                            "CNY": 280,
+                            "EUR": 36,
+                            "GBP": 32,
+                            "HKD": 329,
+                            "JPY": 4746,
+                            "NZD": 59,
+                            "USD": 43
+                        },
+                        "t_date": "2017-11-16",
+                        "t_time": "23:59"
+                    }
+                ],
+                "price": {
+                    "AUD": 54,
+                    "CNY": 280,
+                    "EUR": 36,
+                    "GBP": 32,
+                    "HKD": 329,
+                    "JPY": 4746,
+                    "NZD": 59,
+                    "USD": 43
+                },
+                "sessionObj": {
+                    "currency": "EUR",
+                    "hid": 374562,
+                    "ratePlanId": "1:118116:DBT-E10:ST:BB",
+                    "searchParam": {
+                        "area": {
+                            "hotelId": 374562,
+                            "type": "hotel"
+                        },
+                        "currency": "EUR",
+                        "dateRange": {
+                            "in": "2017-11-17",
+                            "out": "2017-11-18"
+                        },
+                        "pid": 1,
+                        "reqId": "15065635365329831171131554104034000904",
+                        "rooms": [
+                            {
+                                "adults": 2,
+                                "ages": [],
+                                "children": 0
+                            }
+                        ]
+                    },
+                    "sid": "43315065635365329831171131554104034000904",
+                    "sp": "dl",
+                    "sp_id": 133504
+                },
+                "totalPrice": {
+                    "AUD": 54,
+                    "CNY": 280,
+                    "EUR": 36,
+                    "GBP": 32,
+                    "HKD": 329,
+                    "JPY": 4746,
+                    "NZD": 59,
+                    "USD": 43
+                }
+            },
+            "hid": 374562,
+            "room": [
+                {
+                    "desc": " ",
+                    "name": "Double Or Twin Standard",
+                    "number": 1,
+                    "person": 2
+                }
+            ],
+            "sp": "dl",
+            "sp_id": 133504
+        },
+        {
+            "board": {
+                "breakfastFlag": 1,
+                "cancelFlag": 1,
+                "cancelInfo": [
+                    {
+                        "f_date": "2017-09-28",
+                        "f_time": "00:00",
+                        "price": {
+                            "AUD": 0,
+                            "CNY": 0,
+                            "EUR": 0,
+                            "GBP": 0,
+                            "HKD": 0,
+                            "JPY": 0,
+                            "NZD": 0,
+                            "USD": 0
+                        },
+                        "t_date": "2017-11-13",
+                        "t_time": "23:59"
+                    },
+                    {
+                        "f_date": "2017-11-14",
+                        "f_time": "00:00",
+                        "price": {
+                            "AUD": 70,
+                            "CNY": 364,
+                            "EUR": 47,
+                            "GBP": 41,
+                            "HKD": 428,
+                            "JPY": 6170,
+                            "NZD": 76,
+                            "USD": 55
+                        },
+                        "t_date": "2017-11-16",
+                        "t_time": "23:59"
+                    }
+                ],
+                "price": {
+                    "AUD": 70,
+                    "CNY": 364,
+                    "EUR": 47,
+                    "GBP": 41,
+                    "HKD": 428,
+                    "JPY": 6170,
+                    "NZD": 76,
+                    "USD": 55
+                },
+                "sessionObj": {
+                    "currency": "EUR",
+                    "hid": 374562,
+                    "ratePlanId": "1:118116:TPL-E10:ST:BB",
+                    "searchParam": {
+                        "area": {
+                            "hotelId": 374562,
+                            "type": "hotel"
+                        },
+                        "currency": "EUR",
+                        "dateRange": {
+                            "in": "2017-11-17",
+                            "out": "2017-11-18"
+                        },
+                        "pid": 1,
+                        "reqId": "15065635365329831171131554104034000904",
+                        "rooms": [
+                            {
+                                "adults": 2,
+                                "ages": [],
+                                "children": 0
+                            }
+                        ]
+                    },
+                    "sid": "43315065635365329831171131554104034000904",
+                    "sp": "dl",
+                    "sp_id": 133504
+                },
+                "totalPrice": {
+                    "AUD": 70,
+                    "CNY": 364,
+                    "EUR": 47,
+                    "GBP": 41,
+                    "HKD": 428,
+                    "JPY": 6170,
+                    "NZD": 76,
+                    "USD": 55
+                }
+            },
+            "hid": 374562,
+            "room": [
+                {
+                    "desc": " ",
+                    "name": "Triple Standard",
+                    "number": 1,
+                    "person": 2
+                }
+            ],
+            "sp": "dl",
+            "sp_id": 133504
+        },
+        {
+            "board": {
+                "breakfastFlag": 1,
+                "cancelFlag": 1,
+                "cancelInfo": [
+                    {
+                        "f_date": "2017-09-28",
+                        "f_time": "00:00",
+                        "price": {
+                            "AUD": 0,
+                            "CNY": 0,
+                            "EUR": 0,
+                            "GBP": 0,
+                            "HKD": 0,
+                            "JPY": 0,
+                            "NZD": 0,
+                            "USD": 0
+                        },
+                        "t_date": "2017-11-11",
+                        "t_time": "23:59"
+                    },
+                    {
+                        "f_date": "2017-11-12",
+                        "f_time": "00:00",
+                        "price": {
+                            "AUD": 80,
+                            "CNY": 415,
+                            "EUR": 54,
+                            "GBP": 47,
+                            "HKD": 488,
+                            "JPY": 7034,
+                            "NZD": 87,
+                            "USD": 63
+                        },
+                        "t_date": "2017-11-16",
+                        "t_time": "23:59"
+                    }
+                ],
+                "price": {
+                    "AUD": 80,
+                    "CNY": 415,
+                    "EUR": 54,
+                    "GBP": 47,
+                    "HKD": 488,
+                    "JPY": 7034,
+                    "NZD": 87,
+                    "USD": 63
+                },
+                "sessionObj": {
+                    "currency": "EUR",
+                    "hid": 374562,
+                    "ratePlanId": "25:3B0160FE01B35CB7:BNN",
+                    "searchParam": {
+                        "area": {
+                            "hotelId": 374562,
+                            "type": "hotel"
+                        },
+                        "currency": "EUR",
+                        "dateRange": {
+                            "in": "2017-11-17",
+                            "out": "2017-11-18"
+                        },
+                        "pid": 1,
+                        "reqId": "15065635365329831171131554104034000904",
+                        "rooms": [
+                            {
+                                "adults": 2,
+                                "ages": [],
+                                "children": 0
+                            }
+                        ]
+                    },
+                    "sid": "43315065635365329831171131554104034000904",
+                    "sp": "dl",
+                    "sp_id": 133504
+                },
+                "totalPrice": {
+                    "AUD": 80,
+                    "CNY": 415,
+                    "EUR": 54,
+                    "GBP": 47,
+                    "HKD": 488,
+                    "JPY": 7034,
+                    "NZD": 87,
+                    "USD": 63
+                }
+            },
+            "hid": 374562,
+            "room": [
+                {
+                    "desc": " ",
+                    "name": "Triple Room",
+                    "number": 1,
+                    "person": 2
+                }
+            ],
+            "sp": "dl",
+            "sp_id": 133504
         }
-    ]
+    ],
+    "pid": 1
 }
 ```
 
