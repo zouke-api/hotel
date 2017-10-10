@@ -52,18 +52,31 @@
 **response**：
 ``` json
 {
-    "code": 0,
-    "info": {
-        "id": 10000,
-        "nickName": "name",
-        "gender": 1,
-        "province": "上海",
-        "country": "中国",
-        "city": "上海",
-        "avatarUrl": "https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqDibmaujTj8U9magkcz4wI1pLKBmMuZA4O1Wo4FONBUkLoPxfwG7oOQFhaR8gPoDaITTjEricwNzzQ/0",
-        "identityPass": "pass",
-        "tailorInfo": {
-            "cover":"http://jouker.qiniudn.com/tmp_ce41ed8b046e85e51eb0c86c0e3d4e13.jpg"
+    "code":0,
+    "info":{
+        "id":260658,
+        "nickName":"王克寒",
+        "gender":1,
+        "province":"浙江",
+        "country":"中国",
+        "city":"金华",
+        "avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83erdhDveUv4KLMnrYCDHpHYazbqLIQEzu7SibobfNZzAUU3P2CODMiaHfoZ0rsBlfCZAqJrjGWpSVSyA/0",
+        "identityPass":"pass",
+        "tailorInfo":{"cover":"https://cdn1.zouke.com/tmp_c518a934bc31b700d270433e7cf504ca.jpg"},
+        "card":{
+            //以下是用户自已填写信息，在个人信息展示中优先显示以下信息
+            "weix":"aaa",
+            "company":"欧洲走客",
+            "name":"王克寒",
+            "brief":"个人简介",
+            "email":"shjyh@qq.com",
+            "phone":"18888888888",
+            "avatar":"http://cdn1.zouke.com/journey/user/avatar/1483419156364_2084_ZW1haWxUZW1wbGF0ZTE0LmpwZw-guidepreview",
+            "guide_area":"",
+            "city":{    //所在地
+                "code":387523,"name":"巴黎","gps":{"lat":48.856614,"lng":2.3522219000000177},
+                "country_code":"FR","country_name":"法国"
+            }
         }
     }
 }
