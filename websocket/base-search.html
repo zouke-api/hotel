@@ -1,0 +1,479 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>检索条件 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="search.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../introduce.html">
+            
+                <a href="../introduce.html">
+            
+                    
+                    接口总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    https
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../http/login.html">
+            
+                <a href="../http/login.html">
+            
+                    
+                    登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../http/order.html">
+            
+                <a href="../http/order.html">
+            
+                    
+                    订单/支付
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    websocket
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1" data-path="base-search.html">
+            
+                <a href="base-search.html">
+            
+                    
+                    检索条件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="search.html">
+            
+                <a href="search.html">
+            
+                    
+                    酒店检索
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >检索条件</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p><strong>&#x6CE8;&#xFF1A;websocket&#x4F20;&#x8F93;&#x534F;&#x8BAE;&#x8BE6;&#x89C1;<a href="../introduce.html">&#x63A5;&#x53E3;&#x603B;&#x89C8;</a>&#xFF0C;&#x8BE5;&#x5E94;&#x7528;&#x4F20;&#x9012;&#x7ED9;&#x670D;&#x52A1;&#x7AEF;&#x7684;&#x6574;&#x4E2A;&#x6570;&#x636E;&#x5305;&#x88F9;&#x5728;HtAppRequest&#xFF0C;&#x670D;&#x52A1;&#x7AEF;&#x8FD4;&#x56DE;&#x7684;&#x6574;&#x4E2A;&#x6570;&#x636E;&#x5305;&#x88F9;&#x5728;HtAppResponse&#x4E2D;&#xFF0C;&#x5982;&#xFF1A;</strong></p>
+<pre class="language-"><code class="lang-json">// request
+<span class="token punctuation">{</span>
+    <span class="token property">&quot;HtAppRequest&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;event&quot;</span><span class="token operator">:</span><span class="token string">&quot;subscribe&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;channel&quot;</span><span class="token operator">:</span><span class="token string">&quot;hotel.list&quot;</span><span class="token punctuation">,</span>   
+        <span class="token property">&quot;mid&quot;</span><span class="token operator">:</span><span class="token string">&quot;1504667635712_1357&quot;</span><span class="token punctuation">,</span>      
+        <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token property">&quot;area&quot;</span><span class="token operator">:</span> <span class="token string">&quot;...&#x63A5;&#x53E3;&#x8BF7;&#x6C42;&#x6570;&#x636E;&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;timestamp&quot;</span><span class="token operator">:</span> <span class="token number">1504667679872</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+//response
+<span class="token punctuation">{</span>
+    <span class="token property">&quot;HtAppResponse&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;event&quot;</span><span class="token operator">:</span><span class="token string">&quot;publish&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;channel&quot;</span><span class="token operator">:</span><span class="token string">&quot;hotel.list&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;mid&quot;</span><span class="token operator">:</span><span class="token string">&quot;1504667635712_1357&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token property">&quot;list&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;..&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x6570;&#x636E;&quot;</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;timestamp&quot;</span><span class="token operator">:</span> <span class="token number">1504667679872</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>&#x540E;&#x9762;&#x63A5;&#x53E3;&#x5C06;&#x4E0D;&#x518D;&#x91CD;&#x590D;&#x6B64;&#x90E8;&#x5206;</strong> </p>
+<h3 id="1-hotelqueryget-recommend-list">1. hotel.query.get-recommend-list</h3>
+<p><strong>&#x63CF;&#x8FF0;</strong>&#xFF1A;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x7528;&#x6237;&#x7684;&#x5386;&#x53F2;&#x67E5;&#x8BE2;&#x548C;&#x70ED;&#x95E8;&#x57CE;&#x5E02;</p>
+<p><strong>request</strong>&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span> <span class="token property">&quot;timestamp&quot;</span><span class="token operator">:</span> <span class="token number">1505304290</span> <span class="token punctuation">}</span>
+</code></pre>
+<p><strong>response</strong>&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;history&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span>
+        <span class="token punctuation">{</span> 
+            <span class="token property">&quot;id&quot;</span><span class="token operator">:</span><span class="token number">364410</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;params&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+                <span class="token property">&quot;area&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token property">&quot;code&quot;</span><span class="token operator">:</span><span class="token number">385130</span><span class="token punctuation">,</span><span class="token property">&quot;country&quot;</span><span class="token operator">:</span><span class="token string">&quot;&#x610F;&#x5927;&#x5229;&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;name&quot;</span><span class="token operator">:</span><span class="token string">&quot;&#x7F57;&#x9A6C;&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;type&quot;</span><span class="token operator">:</span><span class="token string">&quot;zone&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;currency&quot;</span><span class="token operator">:</span><span class="token string">&quot;EUR&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;dateRange&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token property">&quot;in&quot;</span><span class="token operator">:</span><span class="token string">&quot;2017-09-07&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;out&quot;</span><span class="token operator">:</span><span class="token string">&quot;2017-09-08&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;range&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token property">&quot;max&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span><span class="token property">&quot;min&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;rooms&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token property">&quot;adults&quot;</span><span class="token operator">:</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token property">&quot;ages&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span><span class="token property">&quot;children&quot;</span><span class="token operator">:</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token property">&quot;pid&quot;</span><span class="token operator">:</span><span class="token string">&quot;all&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;roomNum&quot;</span><span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">]</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;hot&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span>
+        <span class="token punctuation">{</span><span class="token property">&quot;code&quot;</span><span class="token operator">:</span><span class="token number">387523</span><span class="token punctuation">,</span><span class="token property">&quot;name&quot;</span><span class="token operator">:</span><span class="token string">&quot;&#x5DF4;&#x9ECE;&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;country&quot;</span><span class="token operator">:</span><span class="token string">&quot;&#x6CD5;&#x56FD;&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;type&quot;</span><span class="token operator">:</span><span class="token string">&quot;zone&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span><span class="token property">&quot;code&quot;</span><span class="token operator">:</span><span class="token number">3140971</span><span class="token punctuation">,</span><span class="token property">&quot;name&quot;</span><span class="token operator">:</span><span class="token string">&quot;&#x56E0;&#x7279;&#x62C9;&#x80AF;&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;country&quot;</span><span class="token operator">:</span><span class="token string">&quot;&#x745E;&#x58EB;&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;type&quot;</span><span class="token operator">:</span><span class="token string">&quot;zone&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span><span class="token property">&quot;code&quot;</span><span class="token operator">:</span><span class="token number">390333</span><span class="token punctuation">,</span><span class="token property">&quot;name&quot;</span><span class="token operator">:</span><span class="token string">&quot;&#x6377;&#x514B;&#x514B;&#x9C81;&#x59C6;&#x6D1B;&#x592B;&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;country&quot;</span><span class="token operator">:</span><span class="token string">&quot;&#x6377;&#x514B;&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;type&quot;</span><span class="token operator">:</span><span class="token string">&quot;zone&quot;</span><span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span><span class="token number">0</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>&#x8BF4;&#x660E;</strong>&#xFF1A;&#x54CD;&#x5E94;hot&#x5B57;&#x6BB5;&#x8868;&#x793A;&#x70ED;&#x95E8;&#x57CE;&#x5E02;&#xFF0C;history&#x5B57;&#x6BB5;&#x8868;&#x793A;&#x67E5;&#x8BE2;&#x5386;&#x53F2;&#xFF0C;&#x67E5;&#x8BE2;&#x5386;&#x53F2;&#x6BCF;&#x4E00;&#x9879;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x68C0;&#x7D22;&#x6761;&#x4EF6;&#xFF0C;&#x5B8C;&#x6574;&#x7684;&#x68C0;&#x7D22;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x8BE6;&#x89C1;websocket&#x6A21;&#x5757;</p>
+<h3 id="2-hotelquerydelete-query-history">2. hotel.query.delete-query-history</h3>
+<p><strong>&#x63CF;&#x8FF0;</strong>&#xFF1A;&#x5220;&#x9664;&#x5386;&#x53F2;&#x67E5;&#x8BE2;</p>
+<p><strong>request</strong>&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span><span class="token number">360981</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>response</strong>&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;history&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span>
+        <span class="token punctuation">{</span> 
+            <span class="token property">&quot;id&quot;</span><span class="token operator">:</span><span class="token number">364410</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;params&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+                <span class="token property">&quot;area&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token property">&quot;code&quot;</span><span class="token operator">:</span><span class="token number">385130</span><span class="token punctuation">,</span><span class="token property">&quot;country&quot;</span><span class="token operator">:</span><span class="token string">&quot;&#x610F;&#x5927;&#x5229;&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;name&quot;</span><span class="token operator">:</span><span class="token string">&quot;&#x7F57;&#x9A6C;&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;type&quot;</span><span class="token operator">:</span><span class="token string">&quot;zone&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;currency&quot;</span><span class="token operator">:</span><span class="token string">&quot;EUR&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;dateRange&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token property">&quot;in&quot;</span><span class="token operator">:</span><span class="token string">&quot;2017-09-07&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;out&quot;</span><span class="token operator">:</span><span class="token string">&quot;2017-09-08&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;range&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token property">&quot;max&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span><span class="token property">&quot;min&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;rooms&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token property">&quot;adults&quot;</span><span class="token operator">:</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token property">&quot;ages&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span><span class="token property">&quot;children&quot;</span><span class="token operator">:</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token property">&quot;pid&quot;</span><span class="token operator">:</span><span class="token string">&quot;all&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;roomNum&quot;</span><span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">]</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span><span class="token number">0</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>&#x8BF4;&#x660E;</strong>&#xFF1A;&#x8BF7;&#x6C42;id&#x5B57;&#x6BB5;&#x6807;&#x8BC6;&#x5386;&#x53F2;&#x8BB0;&#x5F55;id&#xFF0C;&#x54CD;&#x5E94;history&#x5B57;&#x6BB5;&#x8868;&#x793A;&#x5220;&#x9664;&#x4E00;&#x6761;&#x540E;&#x65B0;&#x7684;&#x5386;&#x53F2;&#x8BB0;&#x5F55;</p>
+<h3 id="3-hotelquerysearch-word">3. hotel.query.search-word</h3>
+<p><strong>&#x63CF;&#x8FF0;</strong>&#xFF1A;&#x6839;&#x636E;&#x5173;&#x952E;&#x5B57;&#x67E5;&#x8BE2; &#x57CE;&#x5E02;/&#x5730;&#x6807;/&#x9152;&#x5E97;&#x540D;</p>
+<p><strong>request</strong>&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;word&quot;</span><span class="token operator">:</span><span class="token string">&quot;&#x5DF4;&#x9ECE;&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>response</strong>&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;list&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span>
+        <span class="token punctuation">{</span><span class="token property">&quot;area&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token property">&quot;code&quot;</span><span class="token operator">:</span><span class="token number">3101065</span><span class="token punctuation">,</span><span class="token property">&quot;name&quot;</span><span class="token operator">:</span><span class="token string">&quot;Dahn&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;country&quot;</span><span class="token operator">:</span><span class="token string">&quot;Palatinate Forest,Rhineland-Palatinate,Germany&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;type&quot;</span><span class="token operator">:</span><span class="token string">&quot;zone&quot;</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span><span class="token property">&quot;area&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token property">&quot;code&quot;</span><span class="token operator">:</span><span class="token number">391056</span><span class="token punctuation">,</span><span class="token property">&quot;name&quot;</span><span class="token operator">:</span><span class="token string">&quot;Dadia&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;country&quot;</span><span class="token operator">:</span><span class="token string">&quot;Thrace,Greece&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;type&quot;</span><span class="token operator">:</span><span class="token string">&quot;zone&quot;</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span><span class="token property">&quot;area&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token property">&quot;code&quot;</span><span class="token operator">:</span><span class="token number">64053</span><span class="token punctuation">,</span><span class="token property">&quot;name&quot;</span><span class="token operator">:</span><span class="token string">&quot;D-Day Museum&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;country&quot;</span><span class="token operator">:</span><span class="token string">&quot;&#x6734;&#x6B21;&#x8305;&#x65AF;,&#x82F1;&#x56FD;&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;gps&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token property">&quot;lng&quot;</span><span class="token operator">:</span>-<span class="token number">1.089412</span><span class="token punctuation">,</span><span class="token property">&quot;lat&quot;</span><span class="token operator">:</span><span class="token number">50.77964</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token property">&quot;type&quot;</span><span class="token operator">:</span><span class="token string">&quot;poi&quot;</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span><span class="token number">0</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>&#x6CE8;</strong>&#xFF1A;&#x5B9E;&#x65F6;&#x67E5;&#x8BE2;&#x65F6;&#xFF0C;&#x4E0D;&#x8981;&#x8FC7;&#x4E8E;&#x9891;&#x7E41;&#x8C03;&#x7528;&#x8BE5;&#x63A5;&#x53E3;&#xFF0C;&#x524D;&#x7AEF;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;debounce&#x9632;&#x6296;&#x65B9;&#x6CD5;</p>
+<h3 id="4-hotelqueryget-static-data">4. hotel.query.get-static-data</h3>
+<p><strong>&#x63CF;&#x8FF0;</strong>&#xFF1A;&#x83B7;&#x53D6;&#x9152;&#x5E97;&#x7684;&#x9759;&#x6001;&#x6570;&#x636E;</p>
+<p><strong>request</strong>&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;dateRange&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token property">&quot;in&quot;</span><span class="token operator">:</span><span class="token string">&quot;2017-09-13&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;out&quot;</span><span class="token operator">:</span><span class="token string">&quot;2017-09-14&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;currency&quot;</span><span class="token operator">:</span><span class="token string">&quot;EUR&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;range&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token property">&quot;max&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span><span class="token property">&quot;min&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;hid&quot;</span><span class="token operator">:</span><span class="token number">392326</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;rooms&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span>
+        <span class="token punctuation">{</span><span class="token property">&quot;roomNum&quot;</span><span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token property">&quot;adults&quot;</span><span class="token operator">:</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token property">&quot;children&quot;</span><span class="token operator">:</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token property">&quot;ages&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token property">&quot;pid&quot;</span><span class="token operator">:</span><span class="token string">&quot;all&quot;</span><span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>response</strong>&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;detail&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+        <span class="token property">&quot;hid&quot;</span><span class="token operator">:</span><span class="token number">392326</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;name_zh&quot;</span><span class="token operator">:</span><span class="token string">&quot;&#x8FEA;&#x5EB7;&#x7D22;&#x91CC;&#x9152;&#x5E97;&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;name_en&quot;</span><span class="token operator">:</span><span class="token string">&quot;Hotel dei Consoli&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;address&quot;</span><span class="token operator">:</span><span class="token string">&quot;Via Varrone 2/D, &#x666E;&#x62C9;&#x8482; - &#x68B5;&#x8482;&#x5188;&#x57CE;, 00193 &#x7F57;&#x9A6C;, &#x610F;&#x5927;&#x5229;&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;booking_feature&quot;</span><span class="token operator">:</span><span class="token string">&quot;&#x4F4D;&#x7F6E;&#x5F88;&#x8D5E;&#xFF01;&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;booking_score&quot;</span><span class="token operator">:</span><span class="token number">7.1</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;booking_url&quot;</span><span class="token operator">:</span><span class="token string">&quot;https://m.booking.com/hotel/it/deiconsoli.zh-cn.html?label=sid%3D4;sid=1;checkin=2017-09-13;checkout=2017-09-14;no_rooms=1;req_adults=2;selected_currency=EUR;changed_currency=1;top_currency=1;&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;desc&quot;</span><span class="token operator">:</span><span class="token string">&quot;&#x8FD9;&#x5BB6;&#x9152;&#x5E97;&#x8DDD;&#x79BB;&#x68B5;&#x8482;&#x5188;&#x4EC5;&#x6709;400&#x7C73;&#xFF0C;&#x9152;&#x5E97;&#x5C4B;&#x9876;&#x7684;&#x9732;&#x53F0;&#x53EF;&#x4EE5;&#x5C3D;&#x89C8;&#x6574;&#x4E2A;&#x5723;&#x5F7C;&#x5F97;&#x5927;&#x6559;&#x5802;&#x3002;&#x5BA2;&#x623F;&#x63D0;&#x4F9B;&#x514D;&#x8D39;&#x65E0;&#x7EBF;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;&#xFF0C;&#x62E5;&#x6709;&#x5178;&#x96C5;&#x7684;&#x7C89;&#x5237;&#x5899;&#x9762;&#x88C5;&#x9970;&#xFF0C;&#x914D;&#x6709;&#x5730;&#x6BEF;&#x548C;&#x6302;&#x6BEF;&#x3002;\n\nHotel dei Consoli&#x9152;&#x5E97;&#x7684;&#x5BA2;&#x623F;&#x90FD;&#x914D;&#x5907;&#x4E86;&#x7A7A;&#x8C03;&#x3001;&#x7535;&#x89C6;&#x548C;&#x8FF7;&#x4F60;&#x5427;&#xFF0C;&#x5E76;&#x8BBE;&#x6709;&#x73B0;&#x4EE3;&#x5316;&#x7684;&#x6D74;&#x5BA4;&#x3002;&#x90E8;&#x5206;&#x5BA2;&#x623F;&#x914D;&#x6709;Jacuzzi&#xAE;&#x6C34;&#x7597;&#x6D74;&#x7F38;&#x6216;&#x6C34;&#x529B;&#x6309;&#x6469;&#x6DCB;&#x6D74;&#x3002;\n\n&#x9732;&#x53F0;&#x4E0A;&#x79CD;&#x6709;&#x67D1;&#x6A58;&#x6811;&#x548C;&#x6A44;&#x6984;&#x6811;&#xFF0C;&#x5E76;&#x8BBE;&#x6709;&#x5E26;&#x610F;&#x5927;&#x5229;&#x624B;&#x5DE5;&#x88C5;&#x9970;&#x9676;&#x74F7;&#x7684;&#x5496;&#x5561;&#x5385;&#x3002;&#x665A;&#x9910;&#x65F6;&#xFF0C;&#x9152;&#x5E97;&#x63D0;&#x4F9B;&#x610F;&#x5927;&#x5229;&#x7ECF;&#x5178;&#x7F8E;&#x98DF;&#x548C;&#x7D20;&#x98DF;&#x8FD9;2&#x79CD;&#x4E0D;&#x540C;&#x7684;&#x83DC;&#x5355;&#x4F9B;&#x5BA2;&#x4EBA;&#x9009;&#x62E9;&#x3002;&#x65E9;&#x9910;&#x65F6;&#xFF0C;&#x9152;&#x5E97;&#x53EF;&#x5E94;&#x8981;&#x6C42;&#x63D0;&#x4F9B;&#x65E0;&#x9EB8;&#x8D28;&#x83DC;&#x5355;&#x3002;\n\nDei Consoli&#x9152;&#x5E97;&#x7684;&#x524D;&#x53F0;&#x6BCF;&#x5929;24&#x5C0F;&#x65F6;&#x5F00;&#x653E;&#xFF0C;&#x5E76;&#x53EF;&#x4EE5;&#x5B89;&#x6392;&#x5E7C;&#x513F;&#x770B;&#x62A4;&#x548C;&#x673A;&#x573A;&#x73ED;&#x8F66;&#x670D;&#x52A1;&#x3002;&#x9152;&#x5E97;&#x8DDD;&#x79BB;&#x68B5;&#x8482;&#x5188;&#x5730;&#x94C1;&#x7AD9;&#x6709;5&#x5206;&#x949F;&#x7684;&#x6B65;&#x884C;&#x8DEF;&#x7A0B;&#x3002;\n\n&#x65C5;&#x53CB;&#x4EEC;&#x559C;&#x7231;&#x666E;&#x62C9;&#x8482; - &#x68B5;&#x8482;&#x5188;&#x57CE;&#x7684;&#x7406;&#x7531;&#xFF1A;&#x535A;&#x7269;&#x9986;&#x3001;&#x827A;&#x672F;&#x548C;&#x6587;&#x5316;&#x3002;\n\n\n&#x592B;&#x59BB;/&#x60C5;&#x4FA3;&#x7279;&#x522B;&#x559C;&#x6B22;&#x8FD9;&#x5BB6;&#x4F4F;&#x5BBF;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x4E3A;&#x4E24;&#x4EBA;&#x4F4F;&#x5BBF;&#x4F53;&#x9A8C;&#x7ED9;&#x51FA;&#x4E86;8.5&#x5206;&#x3002;&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;gps&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token property">&quot;lng&quot;</span><span class="token operator">:</span><span class="token number">12.459944486618</span><span class="token punctuation">,</span><span class="token property">&quot;lat&quot;</span><span class="token operator">:</span><span class="token number">41.906386349807</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;photos&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span>
+            <span class="token string">&quot;http://ht.cdn.zouke.com/bk/392326/1498969349892.jpg-w800&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;http://ht.cdn.zouke.com/bk/392326/1498969349504.jpg-w800&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;http://ht.cdn.zouke.com/bk/392326/1498969349402.jpg-w800&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;http://ht.cdn.zouke.com/bk/392326/1498969349284.jpg-w800&quot;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;services&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+            <span class="token property">&quot;facilities&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span>
+                <span class="token punctuation">{</span><span class="token property">&quot;code&quot;</span><span class="token operator">:</span><span class="token number">13</span><span class="token punctuation">,</span><span class="token property">&quot;name&quot;</span><span class="token operator">:</span><span class="token string">&quot;&#x6237;&#x5916;&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;items&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token string">&quot;&#x9732;&#x53F0;&quot;</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">{</span><span class="token property">&quot;code&quot;</span><span class="token operator">:</span>-<span class="token number">2</span><span class="token punctuation">,</span><span class="token property">&quot;name&quot;</span><span class="token operator">:</span><span class="token string">&quot;&#x5BA0;&#x7269;&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;items&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token string">&quot;&#x4E0D;&#x5141;&#x8BB8;&#x643A;&#x5E26;&#x5BA0;&#x7269;&#x5165;&#x4F4F;&#x3002;&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">{</span><span class="token property">&quot;code&quot;</span><span class="token operator">:</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token property">&quot;name&quot;</span><span class="token operator">:</span><span class="token string">&quot;&#x6D3B;&#x52A8;&#x8BBE;&#x65BD;&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;items&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token string">&quot;&#x81EA;&#x884C;&#x8F66;&#x79DF;&#x8D41;&#xFF08;&#x989D;&#x5916;&#x6536;&#x8D39;&#xFF09;&quot;</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">{</span><span class="token property">&quot;code&quot;</span><span class="token operator">:</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token property">&quot;name&quot;</span><span class="token operator">:</span><span class="token string">&quot;&#x9910;&#x996E;&#x670D;&#x52A1;&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;items&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token string">&quot;&#x7279;&#x522B;&#x8282;&#x98DF;&#x83DC;&#x5355;&#xFF08;&#x5E94;&#x8981;&#x6C42;&#x63D0;&#x4F9B;&#xFF09;&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;&#x5C0F;&#x5403;&#x5427;&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;&#x5728;&#x5BA2;&#x623F;&#x5185;&#x4EAB;&#x7528;&#x65E9;&#x9910;&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;&#x9152;&#x5427;&quot;</span><span class="token punctuation">]</span><span class="token punctuation">}</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;hotFacilities&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token string">&quot;&#x514D;&#x8D39;&#x65E0;&#x7EBF;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;&#x505C;&#x8F66;&#x573A;&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;&#x673A;&#x573A;&#x73ED;&#x8F66;&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;&#x7981;&#x70DF;&#x5BA2;&#x623F;&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;&#x65E0;&#x969C;&#x788D;&#x8BBE;&#x65BD;&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;&#x5BA2;&#x623F;&#x670D;&#x52A1;&quot;</span><span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;star&quot;</span><span class="token operator">:</span><span class="token number">4</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;tag&quot;</span><span class="token operator">:</span><span class="token string">&quot;&#x56DB;&#x661F;&#x7EA7;&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;check_in_time&quot;</span><span class="token operator">:</span><span class="token string">&quot;&#x4ECE;14:00&#x65F6;&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;check_out_time&quot;</span><span class="token operator">:</span><span class="token string">&quot;11:00&#x65F6;&#x4E4B;&#x524D;&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span><span class="token number">0</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>&#x6CE8;</strong>&#xFF1A;&#x8BE5;&#x63A5;&#x53E3;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x4E0E;<code>websocket</code>&#x4E2D;&#x67E5;&#x8BE2;&#x62A5;&#x4EF7;&#x63A5;&#x53E3;&#x7684;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x4E00;&#x81F4;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="search.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 酒店检索">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"检索条件","level":"1.4.1","depth":2,"next":{"title":"酒店检索","level":"1.4.2","depth":2,"path":"websocket/search.md","ref":"websocket/search.md","articles":[]},"previous":{"title":"websocket","level":"1.4","depth":1,"ref":"","articles":[{"title":"检索条件","level":"1.4.1","depth":2,"path":"websocket/base-search.md","ref":"websocket/base-search.md","articles":[]},{"title":"酒店检索","level":"1.4.2","depth":2,"path":"websocket/search.md","ref":"websocket/search.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":">3.0.0","theme":"default","variables":{},"plugins":["edit-link","prism","github"],"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/zouke-api/hotel/tree/master"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/zouke-api/hotel/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"websocket/base-search.md","mtime":"2017-10-29T04:34:13.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-29T07:09:21.823Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

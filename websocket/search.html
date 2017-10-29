@@ -1,0 +1,908 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>酒店检索 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="base-search.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../introduce.html">
+            
+                <a href="../introduce.html">
+            
+                    
+                    接口总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    https
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../http/login.html">
+            
+                <a href="../http/login.html">
+            
+                    
+                    登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../http/order.html">
+            
+                <a href="../http/order.html">
+            
+                    
+                    订单/支付
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    websocket
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="base-search.html">
+            
+                <a href="base-search.html">
+            
+                    
+                    检索条件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="search.html">
+            
+                <a href="search.html">
+            
+                    
+                    酒店检索
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >酒店检索</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="1-hotellist">1. hotel.list</h3>
+<p><strong>&#x63CF;&#x8FF0;</strong>&#xFF1A;&#x68C0;&#x7D22;&#x9152;&#x5E97;&#x5217;&#x8868;</p>
+<p><strong>request</strong>&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;area&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token property">&quot;code&quot;</span><span class="token operator">:</span><span class="token number">385130</span><span class="token punctuation">,</span><span class="token property">&quot;country&quot;</span><span class="token operator">:</span><span class="token string">&quot;&#x610F;&#x5927;&#x5229;&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;name&quot;</span><span class="token operator">:</span><span class="token string">&quot;&#x7F57;&#x9A6C;&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;type&quot;</span><span class="token operator">:</span><span class="token string">&quot;zone&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;dateRange&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token property">&quot;in&quot;</span><span class="token operator">:</span><span class="token string">&quot;2017-09-13&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;out&quot;</span><span class="token operator">:</span><span class="token string">&quot;2017-09-14&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;currency&quot;</span><span class="token operator">:</span><span class="token string">&quot;EUR&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;range&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token property">&quot;max&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span><span class="token property">&quot;min&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;rooms&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span>
+        <span class="token punctuation">{</span><span class="token property">&quot;roomNum&quot;</span><span class="token operator">:</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token property">&quot;adults&quot;</span><span class="token operator">:</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token property">&quot;children&quot;</span><span class="token operator">:</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token property">&quot;ages&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token property">&quot;pid&quot;</span><span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span><span class="token property">&quot;roomNum&quot;</span><span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token property">&quot;adults&quot;</span><span class="token operator">:</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token property">&quot;children&quot;</span><span class="token operator">:</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token property">&quot;ages&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token property">&quot;pid&quot;</span><span class="token operator">:</span><span class="token number">2</span><span class="token punctuation">}</span>
+        <span class="token punctuation">{</span><span class="token property">&quot;roomNum&quot;</span><span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token property">&quot;adults&quot;</span><span class="token operator">:</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token property">&quot;children&quot;</span><span class="token operator">:</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token property">&quot;ages&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token property">&quot;pid&quot;</span><span class="token operator">:</span><span class="token number">3</span><span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>response</strong>&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;finish&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;list&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+        <span class="token property">&quot;hotDesc&quot;</span><span class="token operator">:</span><span class="token string">&quot;&#x7F57;&#x9A6C;&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;hotHotels&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;hotels&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;address&quot;</span><span class="token operator">:</span><span class="token string">&quot;Via Varrone 2/D, &#x666E;&#x62C9;&#x8482; - &#x68B5;&#x8482;&#x5188;&#x57CE;, 00193 &#x7F57;&#x9A6C;, &#x610F;&#x5927;&#x5229;&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;address_en&quot;</span><span class="token operator">:</span><span class="token string">&quot;Via Varrone 2/D, Vatican City - Prati, 00193 Rome, Italy&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;bk_url&quot;</span><span class="token operator">:</span><span class="token string">&quot;https://www.booking.com/hotel/it/deiconsoli.zh-cn.html&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;booking_feature&quot;</span><span class="token operator">:</span><span class="token string">&quot;&#x4F4D;&#x7F6E;&#x5F88;&#x8D5E;&#xFF01;&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;booking_feature_score&quot;</span><span class="token operator">:</span><span class="token number">8.4</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;booking_score&quot;</span><span class="token operator">:</span><span class="token number">7.1</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;check_in_time&quot;</span><span class="token operator">:</span><span class="token string">&quot;&#x4ECE;14:00&#x65F6;&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;check_out_time&quot;</span><span class="token operator">:</span><span class="token string">&quot;11:00&#x65F6;&#x4E4B;&#x524D;&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;gps&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token property">&quot;lat&quot;</span><span class="token operator">:</span><span class="token number">41.906386349807</span><span class="token punctuation">,</span><span class="token property">&quot;lng&quot;</span><span class="token operator">:</span><span class="token number">12.459944486618</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;hid&quot;</span><span class="token operator">:</span><span class="token number">392326</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;name&quot;</span><span class="token operator">:</span><span class="token string">&quot;Hotel dei Consoli &#x8FEA;&#x5EB7;&#x7D22;&#x91CC;&#x9152;&#x5E97;&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;name_en&quot;</span><span class="token operator">:</span><span class="token string">&quot;Hotel dei Consoli&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;name_zh&quot;</span><span class="token operator">:</span><span class="token string">&quot;&#x8FEA;&#x5EB7;&#x7D22;&#x91CC;&#x9152;&#x5E97;&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;phone&quot;</span><span class="token operator">:</span><span class="token string">&quot;+390668892972&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;photo&quot;</span><span class="token operator">:</span><span class="token string">&quot;http://ht.cdn.zouke.com/bk/392326/1498753489127.jpg-w400&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;position&quot;</span><span class="token operator">:</span><span class="token string">&quot;&#x666E;&#x62C9;&#x8482; - &#x68B5;&#x8482;&#x5188;&#x57CE;,&#x7F57;&#x9A6C;,&#x62C9;&#x9F50;&#x5965;&#x5927;&#x533A;,&#x610F;&#x5927;&#x5229;&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;price&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token property">&quot;AUD&quot;</span><span class="token operator">:</span><span class="token number">148.7</span><span class="token punctuation">,</span><span class="token property">&quot;CAD&quot;</span><span class="token operator">:</span><span class="token number">144.9</span><span class="token punctuation">,</span><span class="token property">&quot;CHF&quot;</span><span class="token operator">:</span><span class="token number">114.6</span><span class="token punctuation">,</span><span class="token property">&quot;CNY&quot;</span><span class="token operator">:</span><span class="token number">782.5</span><span class="token punctuation">,</span><span class="token property">&quot;EUR&quot;</span><span class="token operator">:</span><span class="token number">99.9</span><span class="token punctuation">,</span><span class="token property">&quot;GBP&quot;</span><span class="token operator">:</span><span class="token number">90</span><span class="token punctuation">,</span><span class="token property">&quot;HKD&quot;</span><span class="token operator">:</span><span class="token number">933.8</span><span class="token punctuation">,</span><span class="token property">&quot;JPY&quot;</span><span class="token operator">:</span><span class="token number">13113.6</span><span class="token punctuation">,</span><span class="token property">&quot;NZD&quot;</span><span class="token operator">:</span><span class="token number">163.7</span><span class="token punctuation">,</span><span class="token property">&quot;SGD&quot;</span><span class="token operator">:</span><span class="token number">160.8</span><span class="token punctuation">,</span><span class="token property">&quot;USD&quot;</span><span class="token operator">:</span><span class="token number">119.5</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;services&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token property">&quot;board&quot;</span><span class="token operator">:</span><span class="token boolean">false</span><span class="token punctuation">,</span><span class="token property">&quot;other&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token property">&quot;stop&quot;</span><span class="token operator">:</span><span class="token string">&quot;&#x505C;&#x8F66;&#x573A;&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;tv&quot;</span><span class="token operator">:</span><span class="token boolean">false</span><span class="token punctuation">,</span><span class="token property">&quot;wifi&quot;</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;star&quot;</span><span class="token operator">:</span><span class="token number">4</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;tag&quot;</span><span class="token operator">:</span><span class="token string">&quot;&#x56DB;&#x661F;&#x7EA7;&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;zone_name&quot;</span><span class="token operator">:</span><span class="token string">&quot;&quot;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>&#x8BF4;&#x660E;</strong>&#xFF1A;&#x8BF7;&#x6C42;&#x4E2D;&#x7684;area&#x4E3A;&#x9009;&#x62E9;&#x533A;&#x57DF;&#x65F6;&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x8BE5;&#x7ED3;&#x6784;&#x5FC5;&#x5B9A;&#x4F1A;&#x6709;<code>name</code>&#x5B57;&#x6BB5;&#x548C;<code>type</code>&#x5B57;&#x6BB5;&#xFF0C;&#x5176;&#x4F59;&#x5B57;&#x6BB5;&#x53EF;&#x4E0D;&#x5173;&#x5FC3;&#xFF0C;&#x8C03;&#x7528;&#x65F6;&#x76F4;&#x63A5;&#x628A;&#x5B8C;&#x6574;&#x7684;&#x7ED3;&#x6784;&#x4F20;&#x8F93;&#x7ED9;&#x670D;&#x52A1;&#x7AEF;&#xFF0C;rooms&#x5B57;&#x6BB5;&#xFF0C;&#x5982;&#x679C;&#x591A;&#x623F;&#x578B;&#x4E2D;&#xFF0C;&#x5B58;&#x5728;&#x4EBA;&#x6570;&#x548C;&#x513F;&#x7AE5;&#x5E74;&#x9F84;&#x6570;&#x76F8;&#x540C;&#x623F;&#x578B;&#xFF0C;&#x9700;&#x8981;&#x505A;&#x5408;&#x5E76;&#xFF0C;pid&#x5B57;&#x6BB5;&#x4E3A;&#x6570;&#x7EC4;&#x7D22;&#x5F15;&#x9ED8;&#x8BA4;&#x4ECE;1&#x5F00;&#x59CB;&#x3002;&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x4E2D;finish&#x5B57;&#x6BB5;&#x6807;&#x8BC6;&#x8BE5;&#x6B21;&#x63A8;&#x9001;&#x662F;&#x5426;&#x662F;&#x6700;&#x540E;&#x4E00;&#x6B21;&#xFF0C;&#x6CE8;&#xFF1A;&#x5982;&#x679C;&#x4E0D;&#x662F;&#x6700;&#x540E;&#x4E00;&#x6B21;&#xFF0C;&#x4E0D;&#x4F1A;&#x6709;finish&#x5B57;&#x6BB5;&#xFF01;</p>
+<h3 id="2-hoteldetailprice">2. hotel.detail.price</h3>
+<p><strong>&#x63CF;&#x8FF0;</strong>&#xFF1A;&#x68C0;&#x7D22;&#x9152;&#x5E97;&#x5217;&#x8868;</p>
+<p><strong>request</strong>&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;dateRange&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token property">&quot;in&quot;</span><span class="token operator">:</span><span class="token string">&quot;2017-09-13&quot;</span><span class="token punctuation">,</span><span class="token property">&quot;out&quot;</span><span class="token operator">:</span><span class="token string">&quot;2017-09-14&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;currency&quot;</span><span class="token operator">:</span><span class="token string">&quot;EUR&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;range&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token property">&quot;max&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">,</span><span class="token property">&quot;min&quot;</span><span class="token operator">:</span><span class="token null">null</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;hid&quot;</span><span class="token operator">:</span><span class="token number">392326</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;rooms&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span>
+        <span class="token punctuation">{</span><span class="token property">&quot;roomNum&quot;</span><span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token property">&quot;adults&quot;</span><span class="token operator">:</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token property">&quot;children&quot;</span><span class="token operator">:</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token property">&quot;ages&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token property">&quot;pid&quot;</span><span class="token operator">:</span><span class="token string">&quot;all&quot;</span><span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>response</strong>&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;cases&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;board&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;breakfastFlag&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;cancelFlag&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;cancelInfo&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token punctuation">{</span>
+                        <span class="token property">&quot;f_date&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-09-28&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;f_time&quot;</span><span class="token operator">:</span> <span class="token string">&quot;00:00&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;AUD&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;CNY&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;EUR&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;GBP&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;HKD&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;JPY&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;NZD&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;USD&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;t_date&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-11-14&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;t_time&quot;</span><span class="token operator">:</span> <span class="token string">&quot;23:59&quot;</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">{</span>
+                        <span class="token property">&quot;f_date&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-11-15&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;f_time&quot;</span><span class="token operator">:</span> <span class="token string">&quot;00:00&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;AUD&quot;</span><span class="token operator">:</span> <span class="token number">53</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;CNY&quot;</span><span class="token operator">:</span> <span class="token number">275</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;EUR&quot;</span><span class="token operator">:</span> <span class="token number">36</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;GBP&quot;</span><span class="token operator">:</span> <span class="token number">31</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;HKD&quot;</span><span class="token operator">:</span> <span class="token number">323</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;JPY&quot;</span><span class="token operator">:</span> <span class="token number">4662</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;NZD&quot;</span><span class="token operator">:</span> <span class="token number">58</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;USD&quot;</span><span class="token operator">:</span> <span class="token number">42</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;t_date&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-11-16&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;t_time&quot;</span><span class="token operator">:</span> <span class="token string">&quot;23:59&quot;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;AUD&quot;</span><span class="token operator">:</span> <span class="token number">53</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;CNY&quot;</span><span class="token operator">:</span> <span class="token number">275</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;EUR&quot;</span><span class="token operator">:</span> <span class="token number">36</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;GBP&quot;</span><span class="token operator">:</span> <span class="token number">31</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;HKD&quot;</span><span class="token operator">:</span> <span class="token number">323</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;JPY&quot;</span><span class="token operator">:</span> <span class="token number">4662</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;NZD&quot;</span><span class="token operator">:</span> <span class="token number">58</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;USD&quot;</span><span class="token operator">:</span> <span class="token number">42</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;sessionObj&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;currency&quot;</span><span class="token operator">:</span> <span class="token string">&quot;EUR&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;hid&quot;</span><span class="token operator">:</span> <span class="token number">374562</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;ratePlanId&quot;</span><span class="token operator">:</span> <span class="token string">&quot;5:545985:34086945:2:1331:3:Y&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;searchParam&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                        <span class="token property">&quot;area&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;hotelId&quot;</span><span class="token operator">:</span> <span class="token number">374562</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;hotel&quot;</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;currency&quot;</span><span class="token operator">:</span> <span class="token string">&quot;EUR&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;dateRange&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;in&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-11-17&quot;</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;out&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-11-18&quot;</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;pid&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;reqId&quot;</span><span class="token operator">:</span> <span class="token string">&quot;15065635365329831171131554104034000904&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;rooms&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                            <span class="token punctuation">{</span>
+                                <span class="token property">&quot;adults&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+                                <span class="token property">&quot;ages&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                <span class="token property">&quot;children&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+                            <span class="token punctuation">}</span>
+                        <span class="token punctuation">]</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;sid&quot;</span><span class="token operator">:</span> <span class="token string">&quot;43315065635365329831171131554104034000904&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;sp&quot;</span><span class="token operator">:</span> <span class="token string">&quot;dl&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;sp_id&quot;</span><span class="token operator">:</span> <span class="token number">133504</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;totalPrice&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;AUD&quot;</span><span class="token operator">:</span> <span class="token number">53</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;CNY&quot;</span><span class="token operator">:</span> <span class="token number">275</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;EUR&quot;</span><span class="token operator">:</span> <span class="token number">36</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;GBP&quot;</span><span class="token operator">:</span> <span class="token number">31</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;HKD&quot;</span><span class="token operator">:</span> <span class="token number">323</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;JPY&quot;</span><span class="token operator">:</span> <span class="token number">4662</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;NZD&quot;</span><span class="token operator">:</span> <span class="token number">58</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;USD&quot;</span><span class="token operator">:</span> <span class="token number">42</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;hid&quot;</span><span class="token operator">:</span> <span class="token number">374562</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;room&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">&quot;desc&quot;</span><span class="token operator">:</span> <span class="token string">&quot; &quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Double/twin&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;number&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;person&quot;</span><span class="token operator">:</span> <span class="token number">2</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;sp&quot;</span><span class="token operator">:</span> <span class="token string">&quot;dl&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;sp_id&quot;</span><span class="token operator">:</span> <span class="token number">133504</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;board&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;breakfastFlag&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;cancelFlag&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;cancelInfo&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token punctuation">{</span>
+                        <span class="token property">&quot;f_date&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-09-28&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;f_time&quot;</span><span class="token operator">:</span> <span class="token string">&quot;00:00&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;AUD&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;CNY&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;EUR&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;GBP&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;HKD&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;JPY&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;NZD&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;USD&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;t_date&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-11-12&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;t_time&quot;</span><span class="token operator">:</span> <span class="token string">&quot;23:59&quot;</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">{</span>
+                        <span class="token property">&quot;f_date&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-11-13&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;f_time&quot;</span><span class="token operator">:</span> <span class="token string">&quot;00:00&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;AUD&quot;</span><span class="token operator">:</span> <span class="token number">54</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;CNY&quot;</span><span class="token operator">:</span> <span class="token number">279</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;EUR&quot;</span><span class="token operator">:</span> <span class="token number">36</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;GBP&quot;</span><span class="token operator">:</span> <span class="token number">32</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;HKD&quot;</span><span class="token operator">:</span> <span class="token number">328</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;JPY&quot;</span><span class="token operator">:</span> <span class="token number">4729</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;NZD&quot;</span><span class="token operator">:</span> <span class="token number">59</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;USD&quot;</span><span class="token operator">:</span> <span class="token number">42</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;t_date&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-11-16&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;t_time&quot;</span><span class="token operator">:</span> <span class="token string">&quot;23:59&quot;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;AUD&quot;</span><span class="token operator">:</span> <span class="token number">54</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;CNY&quot;</span><span class="token operator">:</span> <span class="token number">279</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;EUR&quot;</span><span class="token operator">:</span> <span class="token number">36</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;GBP&quot;</span><span class="token operator">:</span> <span class="token number">32</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;HKD&quot;</span><span class="token operator">:</span> <span class="token number">328</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;JPY&quot;</span><span class="token operator">:</span> <span class="token number">4729</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;NZD&quot;</span><span class="token operator">:</span> <span class="token number">59</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;USD&quot;</span><span class="token operator">:</span> <span class="token number">42</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;sessionObj&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;currency&quot;</span><span class="token operator">:</span> <span class="token string">&quot;EUR&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;hid&quot;</span><span class="token operator">:</span> <span class="token number">374562</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;ratePlanId&quot;</span><span class="token operator">:</span> <span class="token string">&quot;25:46E627198687090D:BNN&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;searchParam&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                        <span class="token property">&quot;area&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;hotelId&quot;</span><span class="token operator">:</span> <span class="token number">374562</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;hotel&quot;</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;currency&quot;</span><span class="token operator">:</span> <span class="token string">&quot;EUR&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;dateRange&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;in&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-11-17&quot;</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;out&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-11-18&quot;</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;pid&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;reqId&quot;</span><span class="token operator">:</span> <span class="token string">&quot;15065635365329831171131554104034000904&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;rooms&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                            <span class="token punctuation">{</span>
+                                <span class="token property">&quot;adults&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+                                <span class="token property">&quot;ages&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                <span class="token property">&quot;children&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+                            <span class="token punctuation">}</span>
+                        <span class="token punctuation">]</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;sid&quot;</span><span class="token operator">:</span> <span class="token string">&quot;43315065635365329831171131554104034000904&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;sp&quot;</span><span class="token operator">:</span> <span class="token string">&quot;dl&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;sp_id&quot;</span><span class="token operator">:</span> <span class="token number">133504</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;totalPrice&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;AUD&quot;</span><span class="token operator">:</span> <span class="token number">54</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;CNY&quot;</span><span class="token operator">:</span> <span class="token number">279</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;EUR&quot;</span><span class="token operator">:</span> <span class="token number">36</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;GBP&quot;</span><span class="token operator">:</span> <span class="token number">32</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;HKD&quot;</span><span class="token operator">:</span> <span class="token number">328</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;JPY&quot;</span><span class="token operator">:</span> <span class="token number">4729</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;NZD&quot;</span><span class="token operator">:</span> <span class="token number">59</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;USD&quot;</span><span class="token operator">:</span> <span class="token number">42</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;hid&quot;</span><span class="token operator">:</span> <span class="token number">374562</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;room&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">&quot;desc&quot;</span><span class="token operator">:</span> <span class="token string">&quot; &quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Twin/double Room&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;number&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;person&quot;</span><span class="token operator">:</span> <span class="token number">2</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;sp&quot;</span><span class="token operator">:</span> <span class="token string">&quot;dl&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;sp_id&quot;</span><span class="token operator">:</span> <span class="token number">133504</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;board&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;breakfastFlag&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;cancelFlag&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;cancelInfo&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token punctuation">{</span>
+                        <span class="token property">&quot;f_date&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-09-28&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;f_time&quot;</span><span class="token operator">:</span> <span class="token string">&quot;00:00&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;AUD&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;CNY&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;EUR&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;GBP&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;HKD&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;JPY&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;NZD&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;USD&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;t_date&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-11-13&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;t_time&quot;</span><span class="token operator">:</span> <span class="token string">&quot;23:59&quot;</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">{</span>
+                        <span class="token property">&quot;f_date&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-11-14&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;f_time&quot;</span><span class="token operator">:</span> <span class="token string">&quot;00:00&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;AUD&quot;</span><span class="token operator">:</span> <span class="token number">54</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;CNY&quot;</span><span class="token operator">:</span> <span class="token number">280</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;EUR&quot;</span><span class="token operator">:</span> <span class="token number">36</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;GBP&quot;</span><span class="token operator">:</span> <span class="token number">32</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;HKD&quot;</span><span class="token operator">:</span> <span class="token number">329</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;JPY&quot;</span><span class="token operator">:</span> <span class="token number">4746</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;NZD&quot;</span><span class="token operator">:</span> <span class="token number">59</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;USD&quot;</span><span class="token operator">:</span> <span class="token number">43</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;t_date&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-11-16&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;t_time&quot;</span><span class="token operator">:</span> <span class="token string">&quot;23:59&quot;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;AUD&quot;</span><span class="token operator">:</span> <span class="token number">54</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;CNY&quot;</span><span class="token operator">:</span> <span class="token number">280</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;EUR&quot;</span><span class="token operator">:</span> <span class="token number">36</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;GBP&quot;</span><span class="token operator">:</span> <span class="token number">32</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;HKD&quot;</span><span class="token operator">:</span> <span class="token number">329</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;JPY&quot;</span><span class="token operator">:</span> <span class="token number">4746</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;NZD&quot;</span><span class="token operator">:</span> <span class="token number">59</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;USD&quot;</span><span class="token operator">:</span> <span class="token number">43</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;sessionObj&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;currency&quot;</span><span class="token operator">:</span> <span class="token string">&quot;EUR&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;hid&quot;</span><span class="token operator">:</span> <span class="token number">374562</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;ratePlanId&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1:118116:DBT-E10:ST:BB&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;searchParam&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                        <span class="token property">&quot;area&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;hotelId&quot;</span><span class="token operator">:</span> <span class="token number">374562</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;hotel&quot;</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;currency&quot;</span><span class="token operator">:</span> <span class="token string">&quot;EUR&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;dateRange&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;in&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-11-17&quot;</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;out&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-11-18&quot;</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;pid&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;reqId&quot;</span><span class="token operator">:</span> <span class="token string">&quot;15065635365329831171131554104034000904&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;rooms&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                            <span class="token punctuation">{</span>
+                                <span class="token property">&quot;adults&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+                                <span class="token property">&quot;ages&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                <span class="token property">&quot;children&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+                            <span class="token punctuation">}</span>
+                        <span class="token punctuation">]</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;sid&quot;</span><span class="token operator">:</span> <span class="token string">&quot;43315065635365329831171131554104034000904&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;sp&quot;</span><span class="token operator">:</span> <span class="token string">&quot;dl&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;sp_id&quot;</span><span class="token operator">:</span> <span class="token number">133504</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;totalPrice&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;AUD&quot;</span><span class="token operator">:</span> <span class="token number">54</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;CNY&quot;</span><span class="token operator">:</span> <span class="token number">280</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;EUR&quot;</span><span class="token operator">:</span> <span class="token number">36</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;GBP&quot;</span><span class="token operator">:</span> <span class="token number">32</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;HKD&quot;</span><span class="token operator">:</span> <span class="token number">329</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;JPY&quot;</span><span class="token operator">:</span> <span class="token number">4746</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;NZD&quot;</span><span class="token operator">:</span> <span class="token number">59</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;USD&quot;</span><span class="token operator">:</span> <span class="token number">43</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;hid&quot;</span><span class="token operator">:</span> <span class="token number">374562</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;room&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">&quot;desc&quot;</span><span class="token operator">:</span> <span class="token string">&quot; &quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Double Or Twin Standard&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;number&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;person&quot;</span><span class="token operator">:</span> <span class="token number">2</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;sp&quot;</span><span class="token operator">:</span> <span class="token string">&quot;dl&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;sp_id&quot;</span><span class="token operator">:</span> <span class="token number">133504</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;board&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;breakfastFlag&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;cancelFlag&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;cancelInfo&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token punctuation">{</span>
+                        <span class="token property">&quot;f_date&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-09-28&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;f_time&quot;</span><span class="token operator">:</span> <span class="token string">&quot;00:00&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;AUD&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;CNY&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;EUR&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;GBP&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;HKD&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;JPY&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;NZD&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;USD&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;t_date&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-11-13&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;t_time&quot;</span><span class="token operator">:</span> <span class="token string">&quot;23:59&quot;</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">{</span>
+                        <span class="token property">&quot;f_date&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-11-14&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;f_time&quot;</span><span class="token operator">:</span> <span class="token string">&quot;00:00&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;AUD&quot;</span><span class="token operator">:</span> <span class="token number">70</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;CNY&quot;</span><span class="token operator">:</span> <span class="token number">364</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;EUR&quot;</span><span class="token operator">:</span> <span class="token number">47</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;GBP&quot;</span><span class="token operator">:</span> <span class="token number">41</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;HKD&quot;</span><span class="token operator">:</span> <span class="token number">428</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;JPY&quot;</span><span class="token operator">:</span> <span class="token number">6170</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;NZD&quot;</span><span class="token operator">:</span> <span class="token number">76</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;USD&quot;</span><span class="token operator">:</span> <span class="token number">55</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;t_date&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-11-16&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;t_time&quot;</span><span class="token operator">:</span> <span class="token string">&quot;23:59&quot;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;AUD&quot;</span><span class="token operator">:</span> <span class="token number">70</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;CNY&quot;</span><span class="token operator">:</span> <span class="token number">364</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;EUR&quot;</span><span class="token operator">:</span> <span class="token number">47</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;GBP&quot;</span><span class="token operator">:</span> <span class="token number">41</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;HKD&quot;</span><span class="token operator">:</span> <span class="token number">428</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;JPY&quot;</span><span class="token operator">:</span> <span class="token number">6170</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;NZD&quot;</span><span class="token operator">:</span> <span class="token number">76</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;USD&quot;</span><span class="token operator">:</span> <span class="token number">55</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;sessionObj&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;currency&quot;</span><span class="token operator">:</span> <span class="token string">&quot;EUR&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;hid&quot;</span><span class="token operator">:</span> <span class="token number">374562</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;ratePlanId&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1:118116:TPL-E10:ST:BB&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;searchParam&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                        <span class="token property">&quot;area&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;hotelId&quot;</span><span class="token operator">:</span> <span class="token number">374562</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;hotel&quot;</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;currency&quot;</span><span class="token operator">:</span> <span class="token string">&quot;EUR&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;dateRange&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;in&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-11-17&quot;</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;out&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-11-18&quot;</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;pid&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;reqId&quot;</span><span class="token operator">:</span> <span class="token string">&quot;15065635365329831171131554104034000904&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;rooms&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                            <span class="token punctuation">{</span>
+                                <span class="token property">&quot;adults&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+                                <span class="token property">&quot;ages&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                <span class="token property">&quot;children&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+                            <span class="token punctuation">}</span>
+                        <span class="token punctuation">]</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;sid&quot;</span><span class="token operator">:</span> <span class="token string">&quot;43315065635365329831171131554104034000904&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;sp&quot;</span><span class="token operator">:</span> <span class="token string">&quot;dl&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;sp_id&quot;</span><span class="token operator">:</span> <span class="token number">133504</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;totalPrice&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;AUD&quot;</span><span class="token operator">:</span> <span class="token number">70</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;CNY&quot;</span><span class="token operator">:</span> <span class="token number">364</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;EUR&quot;</span><span class="token operator">:</span> <span class="token number">47</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;GBP&quot;</span><span class="token operator">:</span> <span class="token number">41</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;HKD&quot;</span><span class="token operator">:</span> <span class="token number">428</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;JPY&quot;</span><span class="token operator">:</span> <span class="token number">6170</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;NZD&quot;</span><span class="token operator">:</span> <span class="token number">76</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;USD&quot;</span><span class="token operator">:</span> <span class="token number">55</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;hid&quot;</span><span class="token operator">:</span> <span class="token number">374562</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;room&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">&quot;desc&quot;</span><span class="token operator">:</span> <span class="token string">&quot; &quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Triple Standard&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;number&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;person&quot;</span><span class="token operator">:</span> <span class="token number">2</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;sp&quot;</span><span class="token operator">:</span> <span class="token string">&quot;dl&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;sp_id&quot;</span><span class="token operator">:</span> <span class="token number">133504</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;board&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;breakfastFlag&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;cancelFlag&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;cancelInfo&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token punctuation">{</span>
+                        <span class="token property">&quot;f_date&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-09-28&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;f_time&quot;</span><span class="token operator">:</span> <span class="token string">&quot;00:00&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;AUD&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;CNY&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;EUR&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;GBP&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;HKD&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;JPY&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;NZD&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;USD&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;t_date&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-11-11&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;t_time&quot;</span><span class="token operator">:</span> <span class="token string">&quot;23:59&quot;</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">{</span>
+                        <span class="token property">&quot;f_date&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-11-12&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;f_time&quot;</span><span class="token operator">:</span> <span class="token string">&quot;00:00&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;AUD&quot;</span><span class="token operator">:</span> <span class="token number">80</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;CNY&quot;</span><span class="token operator">:</span> <span class="token number">415</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;EUR&quot;</span><span class="token operator">:</span> <span class="token number">54</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;GBP&quot;</span><span class="token operator">:</span> <span class="token number">47</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;HKD&quot;</span><span class="token operator">:</span> <span class="token number">488</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;JPY&quot;</span><span class="token operator">:</span> <span class="token number">7034</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;NZD&quot;</span><span class="token operator">:</span> <span class="token number">87</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;USD&quot;</span><span class="token operator">:</span> <span class="token number">63</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;t_date&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-11-16&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;t_time&quot;</span><span class="token operator">:</span> <span class="token string">&quot;23:59&quot;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;price&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;AUD&quot;</span><span class="token operator">:</span> <span class="token number">80</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;CNY&quot;</span><span class="token operator">:</span> <span class="token number">415</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;EUR&quot;</span><span class="token operator">:</span> <span class="token number">54</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;GBP&quot;</span><span class="token operator">:</span> <span class="token number">47</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;HKD&quot;</span><span class="token operator">:</span> <span class="token number">488</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;JPY&quot;</span><span class="token operator">:</span> <span class="token number">7034</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;NZD&quot;</span><span class="token operator">:</span> <span class="token number">87</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;USD&quot;</span><span class="token operator">:</span> <span class="token number">63</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;sessionObj&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;currency&quot;</span><span class="token operator">:</span> <span class="token string">&quot;EUR&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;hid&quot;</span><span class="token operator">:</span> <span class="token number">374562</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;ratePlanId&quot;</span><span class="token operator">:</span> <span class="token string">&quot;25:3B0160FE01B35CB7:BNN&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;searchParam&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                        <span class="token property">&quot;area&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;hotelId&quot;</span><span class="token operator">:</span> <span class="token number">374562</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;hotel&quot;</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;currency&quot;</span><span class="token operator">:</span> <span class="token string">&quot;EUR&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;dateRange&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;in&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-11-17&quot;</span><span class="token punctuation">,</span>
+                            <span class="token property">&quot;out&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-11-18&quot;</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;pid&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;reqId&quot;</span><span class="token operator">:</span> <span class="token string">&quot;15065635365329831171131554104034000904&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;rooms&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                            <span class="token punctuation">{</span>
+                                <span class="token property">&quot;adults&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+                                <span class="token property">&quot;ages&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                <span class="token property">&quot;children&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+                            <span class="token punctuation">}</span>
+                        <span class="token punctuation">]</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;sid&quot;</span><span class="token operator">:</span> <span class="token string">&quot;43315065635365329831171131554104034000904&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;sp&quot;</span><span class="token operator">:</span> <span class="token string">&quot;dl&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;sp_id&quot;</span><span class="token operator">:</span> <span class="token number">133504</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;totalPrice&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;AUD&quot;</span><span class="token operator">:</span> <span class="token number">80</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;CNY&quot;</span><span class="token operator">:</span> <span class="token number">415</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;EUR&quot;</span><span class="token operator">:</span> <span class="token number">54</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;GBP&quot;</span><span class="token operator">:</span> <span class="token number">47</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;HKD&quot;</span><span class="token operator">:</span> <span class="token number">488</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;JPY&quot;</span><span class="token operator">:</span> <span class="token number">7034</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;NZD&quot;</span><span class="token operator">:</span> <span class="token number">87</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;USD&quot;</span><span class="token operator">:</span> <span class="token number">63</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;hid&quot;</span><span class="token operator">:</span> <span class="token number">374562</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;room&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">&quot;desc&quot;</span><span class="token operator">:</span> <span class="token string">&quot; &quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Triple Room&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;number&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;person&quot;</span><span class="token operator">:</span> <span class="token number">2</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;sp&quot;</span><span class="token operator">:</span> <span class="token string">&quot;dl&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;sp_id&quot;</span><span class="token operator">:</span> <span class="token number">133504</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;pid&quot;</span><span class="token operator">:</span> <span class="token number">1</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>&#x8BF4;&#x660E;</strong>&#xFF1A;&#x8BE5;&#x63A5;&#x53E3;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x4E0E;<code>&#x67E5;&#x8BE2;&#x9152;&#x5E97;&#x9759;&#x6001;&#x6570;&#x636E;</code>&#x63A5;&#x53E3;&#x4E2D;&#x7684;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x4E00;&#x81F4;</p>
+<h3 id="3-hoteldetailnearby">3. hotel.detail.nearby</h3>
+<p><strong>&#x63CF;&#x8FF0;</strong>&#xFF1A;&#x67E5;&#x8BE2;&#x9152;&#x5E97;&#x7684;&#x9644;&#x8FD1;&#x9152;&#x5E97;</p>
+<p><strong>request</strong>: &#x540C;<code>hotel.detail.price</code>&#x63A5;&#x53E3;</p>
+<p><strong>response</strong>: &#x540C;<code>hotel.list</code>&#x63A5;&#x53E3;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="base-search.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 检索条件">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"酒店检索","level":"1.4.2","depth":2,"previous":{"title":"检索条件","level":"1.4.1","depth":2,"path":"websocket/base-search.md","ref":"websocket/base-search.md","articles":[]},"dir":"ltr"},"config":{"gitbook":">3.0.0","theme":"default","variables":{},"plugins":["edit-link","prism","github"],"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/zouke-api/hotel/tree/master"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/zouke-api/hotel/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"websocket/search.md","mtime":"2017-10-29T04:34:13.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-29T07:09:21.823Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

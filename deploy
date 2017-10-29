@@ -1,0 +1,8 @@
+cd "$(dirname $0)"
+rm -rf .book
+./node_modules/.bin/gitbook build ./ ./.book
+cd .book
+git init
+git add -A
+git commit -m 'update doc'
+git push -f git@github.com:zouke-api/hotel.git master:gh-pages

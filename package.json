@@ -1,0 +1,8 @@
+{
+  "name": "hotel-api",
+  "version": "1.0.0",
+  "description": "hotel api",
+  "dependencies": {
+    "gitbook-cli": "^2.3.2"
+  }
+}
