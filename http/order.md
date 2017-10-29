@@ -5,7 +5,7 @@
 **request**：
 ``` json
 {
-    "contactTel": "18888888888",#电话
+    "contactTel": "18888888888", # 电话
     "invoice": {
         "need": true,
         "addr": "公司地址",
